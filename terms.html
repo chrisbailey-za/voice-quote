@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Terms &amp; Conditions</title>
+  <meta name="description" content="Terms and Conditions for [Your Site Name]" />
+
+  <!--
+    Single-file Terms & Conditions template (HTML + CSS only).
+    Replace bracketed placeholders like [Your Company], [date], and contact@domain.com.
+    This file intentionally uses no JavaScript or external resources so it's easy to drop into any site.
+  -->
+
+  <style>
+    :root{
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#0f62fe; /* change to match brand */
+      --max-width:1000px;
+      --radius:12px;
+      --gap:1.25rem;
+      --text:#0f1724;
+      --print-break:avoid-page;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    /* Reset-ish */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,var(--bg),#eef2f6);
+      color:var(--text);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:2rem;
+    }
+
+    .wrap{
+      max-width:calc(var(--max-width) + 320px);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns: 260px 1fr;
+      gap:var(--gap);
+      align-items:start;
+    }
+
+    /* Card container */
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:0 6px 20px rgba(16,24,40,0.08);
+      padding:1.25rem;
+    }
+
+    header.site-title{
+      grid-column:1/-1;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      margin-bottom:0.5rem;
+    }
+
+    .brand{
+      display:flex;flex-direction:column;
+    }
+    .brand h1{font-size:1rem;margin:0}
+    .brand p{margin:0;font-size:0.85rem;color:var(--muted)}
+
+    /* Table of contents / nav */
+    nav.toc{
+      position:sticky;top:2rem;height:calc(100vh - 4rem);overflow:auto;padding:0.5rem;
+    }
+    .toc .card{padding:0.75rem}
+    .toc h2{font-size:0.95rem;margin:0 0 0.5rem 0}
+    .toc ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.25rem}
+    .toc a{
+      text-decoration:none;color:var(--muted);font-size:0.92rem;padding:0.4rem;border-radius:8px;display:block
+    }
+    .toc a:hover{background:#f1f5f9;color:var(--text)}
+
+    main.article{
+      padding:1.5rem;
+    }
+
+    main.article h2{font-size:1.05rem;margin:0 0 0.5rem 0}
+    main.article h3{font-size:0.98rem;margin:1.25rem 0 0.5rem}
+    main.article p{margin:0 0 0.75rem;color:var(--text)}
+    .muted{color:var(--muted)}
+
+    .meta{display:flex;gap:1rem;align-items:center;font-size:0.9rem;color:var(--muted);margin-bottom:1rem}
+
+    .section{padding:0.75rem 0;border-top:1px solid #eef2f6}
+    .section:first-of-type{border-top:0}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .wrap{grid-template-columns:1fr;padding:0}
+      nav.toc{position:relative;height:auto}
+    }
+
+    /* Print styles */
+    @media print{
+      body{background:white;padding:0}
+      .toc, header.site-title .actions{display:none}
+      .card{box-shadow:none;border-radius:0}
+      .wrap{grid-template-columns:1fr}
+      .section{page-break-inside:var(--print-break)}
+    }
+
+    /* small helpers */
+    .kbd{display:inline-block;padding:0.15rem 0.4rem;border-radius:6px;background:#f3f4f6;font-size:0.82rem;color:var(--muted)}
+    .highlight{color:var(--accent);font-weight:600}
+    .contact{font-weight:600}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header class="site-title">
+      <div class="brand">
+        <h1>[Your Site Name] — Terms &amp; Conditions</h1>
+        <p class="muted">Please read these terms carefully before using this website.</p>
+      </div>
+      <div class="actions muted">
+        Last updated: <strong class="highlight">[Month DD, YYYY]</strong>
+      </div>
+    </header>
+
+    <nav class="toc card" aria-label="Table of contents">
+      <h2>On this page</h2>
+      <ul>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#acceptance">Acceptance of Terms</a></li>
+        <li><a href="#changes">Changes to Terms</a></li>
+        <li><a href="#use">Use of the Site</a></li>
+        <li><a href="#accounts">Accounts &amp; Security</a></li>
+        <li><a href="#intellectual">Intellectual Property</a></li>
+        <li><a href="#user-content">User Content</a></li>
+        <li><a href="#disclaimer">Disclaimer of Warranties</a></li>
+        <li><a href="#liability">Limitation of Liability</a></li>
+        <li><a href="#indemnity">Indemnification</a></li>
+        <li><a href="#termination">Termination</a></li>
+        <li><a href="#governing">Governing Law</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main class="article card" role="main">
+
+      <div class="meta">
+        <span class="muted">Effective date:</span>
+        <span><strong class="highlight">[Month DD, YYYY]</strong></span>
+      </div>
+
+      <section id="intro" class="section">
+        <h2>1. Introduction</h2>
+        <p>Welcome to <strong>[Your Site Name]</strong> ("we", "us" or "our"). These Terms and Conditions ("Terms") govern your access to and use of our website located at <span class="muted">[yourdomain.com]</span> (the "Site"). By accessing or using the Site, you agree to be bound by these Terms.</p>
+      </section>
+
+      <section id="acceptance" class="section">
+        <h2>2. Acceptance of Terms</h2>
+        <p>By using the Site, you represent and warrant that you are at least 18 years old or visiting with the consent of a parent or guardian. If you do not agree with any part of the Terms, you must not use the Site.</p>
+      </section>
+
+      <section id="changes" class="section">
+        <h2>3. Changes to Terms</h2>
+        <p>We may modify these Terms from time to time. When changes are made, we will update the "Last updated" date above. Your continued use of the Site after the date of any changes constitutes your acceptance of the revised Terms.</p>
+      </section>
+
+      <section id="use" class="section">
+        <h2>4. Use of the Site</h2>
+        <p>You agree to use the Site only for lawful purposes and in accordance with these Terms. You shall not:</p>
+        <ul>
+          <li>Violate any applicable laws or regulations;</li>
+          <li>Infringe the rights of others;</li>
+          <li>Upload malicious code, spam, or engage in any activity that interferes with the Site;</li>
+          <li>Attempt to gain unauthorized access to the Site, other accounts, or networks connected to the Site.</li>
+        </ul>
+      </section>
+
+      <section id="accounts" class="section">
+        <h2>5. Accounts &amp; Security</h2>
+        <p>When you create an account on the Site, you are responsible for maintaining the confidentiality of your account credentials and for all activity that occurs under your account. Notify us immediately at <span class="contact">contact@yourdomain.com</span> if you suspect any unauthorized use.</p>
+      </section>
+
+      <section id="intellectual" class="section">
+        <h2>6. Intellectual Property</h2>
+        <p>All content on the Site, including text, graphics, logos, images, and software, is the property of <strong>[Your Company]</strong> or its licensors and is protected by intellectual property laws. You may not reproduce, distribute, modify, or create derivative works of the Site content without our prior written consent.</p>
+      </section>
+
+      <section id="user-content" class="section">
+        <h2>7. User Content</h2>
+        <p>If you post, submit or otherwise provide content to the Site ("User Content"), you grant us a non-exclusive, worldwide, royalty-free, transferable license to use, reproduce, modify, publish, and distribute that content for the purposes of operating and promoting the Site. You represent that you own or have the necessary rights to post such content and that it does not violate these Terms.</p>
+      </section>
+
+      <section id="disclaimer" class="section">
+        <h2>8. Disclaimer of Warranties</h2>
+        <p>The Site is provided "as is" and "as available" without warranties of any kind, either express or implied. We expressly disclaim all warranties, including but not limited to implied warranties of merchantability, fitness for a particular purpose, non-infringement, and accuracy.</p>
+      </section>
+
+      <section id="liability" class="section">
+        <h2>9. Limitation of Liability</h2>
+        <p>To the fullest extent permitted by law, in no event will we be liable for any indirect, incidental, special, consequential, or punitive damages, or for any loss of profits, revenue, data or data use, arising out of or in connection with your use of the Site.</p>
+      </section>
+
+      <section id="indemnity" class="section">
+        <h2>10. Indemnification</h2>
+        <p>You agree to indemnify and hold harmless <strong>[Your Company]</strong> and its officers, directors, employees, and agents from any claims, liabilities, damages, losses, and expenses arising out of or in any way connected with your use of the Site, violation of these Terms, or infringement of any third-party rights.</p>
+      </section>
+
+      <section id="termination" class="section">
+        <h2>11. Termination</h2>
+        <p>We may suspend or terminate your access to the Site at any time, with or without notice, for any reason, including for violation of these Terms. Sections that by their sense should survive termination (like Intellectual Property, Limitation of Liability, Indemnification, and Governing Law) will survive.</p>
+      </section>
+
+      <section id="governing" class="section">
+        <h2>12. Governing Law</h2>
+        <p>These Terms are governed by and construed in accordance with the laws of <strong>[Your Country / State]</strong>, without regard to conflict of laws principles. You agree to the exclusive jurisdiction of the courts located in <strong>[Your City]</strong> for any disputes arising under these Terms.</p>
+      </section>
+
+      <section id="contact" class="section">
+        <h2>13. Contact</h2>
+        <p>If you have questions about these Terms, please contact us at:</p>
+        <p class="muted">[Your Company Name]<br>
+        Email: <span class="contact">contact@yourdomain.com</span><br>
+        Address: [Your postal address (optional)]</p>
+      </section>
+
+      <section id="misc" class="section">
+        <h3>14. Miscellaneous</h3>
+        <p>These Terms constitute the entire agreement between you and <strong>[Your Company]</strong> regarding your use of the Site, and supersede all prior and contemporaneous agreements and understandings. If any provision of these Terms is found to be invalid or unenforceable, that provision will be enforced to the maximum extent permitted and the remaining provisions will remain in full force and effect.</p>
+      </section>
+
+      <footer class="muted" style="margin-top:1.25rem;font-size:0.9rem">
+        <p>Note: This template is a general-purpose example and does not constitute legal advice. You should adapt the language to your jurisdiction and business and consider seeking legal counsel to ensure compliance with applicable laws.</p>
+      </footer>
+
+    </main>
+
+  </div>
+</body>
+</html>
